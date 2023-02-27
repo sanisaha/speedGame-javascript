@@ -1,0 +1,101 @@
+body {
+  font-family: "Rampart One", cursive;
+  /* background-image: linear-gradient(to right top, green, red); */
+  background-image: url("./assets/umberto-FewHpO4VC9Y-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  max-width: 1200px;
+}
+
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+.circle {
+  background-image: url("./assets/df51cyt-7a59d8f3-6e6a-4f1f-8807-b523a2eb3a25.png");
+  background-size: cover;
+  opacity: 1;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  pointer-events: none;
+}
+button {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  margin: 5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(244, 232, 232);
+  color: rgb(15, 13, 13);
+}
+.overlay {
+  visibility: hidden;
+  background-color: rgba(51, 51, 51, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  font-family: "Shantell Sans", cursive;
+  background-color: rgb(233, 17, 71);
+  color: rgb(8, 8, 8);
+  height: 50vh;
+  width: 75vw;
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+}
+.modal button {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  background-color: transparent;
+  margin: 0;
+  color: white;
+}
+.scoreEnd {
+  font-size: xx-large;
+  color: rgb(247, 241, 241);
+}
+.circle.active {
+  background-image: url("./assets/199-1995463_drawing-poses-sonic-the-hedgehog-video-game-bro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  display: none;
+}
+#message {
+  font-family: "Shantell Sans", cursive;
+  color: whitesmoke;
+}
+
+@media only screen and (min-width: 600px) {
+  .circle {
+    height: 200px;
+    width: 200px;
+  }
+  button {
+    padding: 1.5rem 2rem;
+  }
+}

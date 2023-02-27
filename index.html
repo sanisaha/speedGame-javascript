@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeedGame</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Speedgame</h1>
+      <p>Score: <span class="score"></span></p>
+    </div>
+    <div class="circles">
+      <div class="circle"><p></p></div>
+      <div class="circle"><p></p></div>
+      <div class="circle"><p></p></div>
+      <div class="circle"><p></p></div>
+    </div>
+    <div>
+      <button id="start">Start</button>
+      <button id="end" class="hidden">End</button>
+    </div>
+    <div class="overlay">
+      <div class="modal">
+        <p>Ups, game over!</p>
+        <p>Your score was <span class="scoreEnd">0</span></p>
+        <p id="message"></p>
+        <button id="close">X</button>
+      </div>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
