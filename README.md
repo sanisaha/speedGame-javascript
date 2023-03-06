@@ -6,16 +6,16 @@ https://whimsical-granita-5fa85f.netlify.app/
 
 # Game feature
 
-press start button to start the game
+=> press start button to start the game
 
-if click in the wrong circle / skip
-
+=> If user click on the wrong circle / skip
 clicking for 3 seconds, the game will stop
-user can also stop the game anytime by pressing end button
 
-game speed increase with game progress
+=> User can also stop the game anytime by pressing end button
 
-a modal will show up with score notification if game stop
+=> Game speed will increase with game progress
+
+=> A modal will show up with score notification if game stop
 
 # Technology used
 
