@@ -14,10 +14,16 @@ let rounds = 0;
 let gameSound = new Audio('gameSound.wav')
 let clickSound = new Audio('clickSound.wav')
 let endSound = new Audio('endSound.wav')
+
+// looping all circles and triggering clickCircle function when clicking
 circles.forEach((circle, i) => {
     circle.addEventListener('click', () => clickCircle(i));   
 })
+
+// getting random number
 const getRndInt = (min, max) => Math.floor(Math.random()*(max-min+1)) + min
+
+// triggering new event when clicking circle
 const clickCircle = (i) => {
     clickSound.play()
     if (i !== active){
@@ -27,11 +33,15 @@ const clickCircle = (i) => {
     rounds = 0
     scoreStart.textContent = score
 }
+
+// enable circle clicking option
 const enableCircles = () =>{
     circles.forEach(circle => {
         circle.style.pointerEvents = 'auto'
     })
 }
+
+// main function
 const startGame = () => {  
     if(pace >= 800) {
         gameSound.play()
@@ -58,6 +68,8 @@ const startGame = () => {
         }
     }
 }
+
+// game end conditions
 const endGame = () => {
     endSound.play()
     scoreEnd.textContent = score
@@ -71,9 +83,11 @@ const endGame = () => {
     overlay.style.visibility = 'visible'
     clearTimeout(timer)
 }
+
 const resetGame = () => {
     window.location.reload()
 }
+
 startButton.addEventListener('click', startGame)
 endButton.addEventListener('click', endGame)
 closeButton.addEventListener('click', resetGame)
