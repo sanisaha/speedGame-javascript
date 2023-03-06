@@ -9,7 +9,7 @@ const overlay = document.querySelector('.overlay')
 let score = 0;
 let active = 0;
 let timer;
-let pace = 800;
+let pace = 1000;
 let rounds = 0;
 let gameSound = new Audio('gameSound.wav')
 let clickSound = new Audio('clickSound.wav')
@@ -43,7 +43,7 @@ const enableCircles = () =>{
 
 // main function
 const startGame = () => {  
-    if(pace >= 800) {
+    if(pace >= 1000) {
         gameSound.play()
     }
     if(rounds >= 4) {
@@ -57,7 +57,7 @@ const startGame = () => {
     circles[active].classList.remove('active')
     active = nextActive
     timer = setTimeout(startGame, pace)
-    pace -= 2
+    pace -= 10
     rounds++
     function pickNew(active){
         const nextActive = getRndInt(0,3)
