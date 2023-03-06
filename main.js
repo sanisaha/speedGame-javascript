@@ -17,7 +17,7 @@ let endSound = new Audio('./assets/sounds/endSound.wav')
 
 // looping all circles and triggering clickCircle function when clicking
 circles.forEach((circle, i) => {
-    circle.addEventListener('click', () => clickCircle(i));   
+    circle.addEventListener('click', () => clickCircle(i)); 
 })
 
 // getting random number
