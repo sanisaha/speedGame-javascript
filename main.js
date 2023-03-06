@@ -11,9 +11,9 @@ let active = 0;
 let timer;
 let pace = 1000;
 let rounds = 0;
-let gameSound = new Audio('gameSound.wav')
-let clickSound = new Audio('clickSound.wav')
-let endSound = new Audio('endSound.wav')
+let gameSound = new Audio('./assets/sounds/gameSound.wav')
+let clickSound = new Audio('./assets/sounds/clickSound.wav')
+let endSound = new Audio('./assets/sounds/endSound.wav')
 
 // looping all circles and triggering clickCircle function when clicking
 circles.forEach((circle, i) => {
