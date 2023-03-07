@@ -11,6 +11,7 @@ let active = 0;
 let timer;
 let pace = 1000;
 let rounds = 0;
+let isCircleClicked = false;
 let gameSound = new Audio('./assets/sounds/gameSound.wav')
 let clickSound = new Audio('./assets/sounds/clickSound.wav')
 let endSound = new Audio('./assets/sounds/endSound.wav')
@@ -29,9 +30,12 @@ const clickCircle = (i) => {
     if (i !== active){
         return endGame()
     }
-    score += 10
+    if (!isCircleClicked){
+        score += 10
     rounds = 0
     scoreStart.textContent = score
+    isCircleClicked = true
+    }
 }
 
 // enable circle clicking option
@@ -43,6 +47,7 @@ const enableCircles = () =>{
 
 // main function
 const startGame = () => {  
+    isCircleClicked = false;
     if(pace >= 1000) {
         gameSound.play()
     }
